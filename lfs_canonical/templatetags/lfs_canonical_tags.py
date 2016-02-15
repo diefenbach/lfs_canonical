@@ -28,8 +28,12 @@ def canonical_management(context, product):
 
 class CanonicalNode(template.Node):
     def render(self, context):
-        product = context["product"]
         context["canonical"] = None
+
+        try:
+            product = context["product"]
+        except KeyError:
+            return ''
 
         try:
             canonical = Canonical.objects.get(product=product)
