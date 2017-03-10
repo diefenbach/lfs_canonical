@@ -1,6 +1,6 @@
-# django imports
-from django.conf.urls.defaults import patterns, url
+from django.conf.urls import url
+from . import views
 
-urlpatterns = patterns('lfs_canonical.views',
-    url(r'^edit/(?P<product_id>[-\w]+)$', "edit_canonical", name='lfs_canonical_edit'),
-)
+urlpatterns = [
+    url(r'^edit/(?P<product_id>[-\w]+)$', views.edit_canonical, name='lfs_canonical_edit'),
+]
