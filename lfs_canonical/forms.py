@@ -1,5 +1,5 @@
 from django import forms
-from . models import Canonical
+from .models import Canonical
 
 
 class CanonicalForm(forms.ModelForm):
@@ -9,4 +9,4 @@ class CanonicalForm(forms.ModelForm):
 
     class Meta:
         model = Canonical
-        exclude = ("product", )
+        exclude = ("product",)
