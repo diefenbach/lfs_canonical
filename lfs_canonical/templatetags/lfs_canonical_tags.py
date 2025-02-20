@@ -1,7 +1,6 @@
 from django import template
 from django.utils.safestring import mark_safe
 from django.template import Library
-from django.template import RequestContext
 from django.template.loader import render_to_string
 
 from ..models import Canonical
@@ -20,9 +19,8 @@ def canonical_management(context, product):
 
     result = render_to_string(
         "lfs_canonical/lfs_canonical.html",
-        RequestContext(
-            request, {"product": product, "canonical": canonical, "form": CanonicalForm(instance=canonical)}
-        ),
+        {"product": product, "canonical": canonical, "form": CanonicalForm(instance=canonical)},
+        request,
     )
 
     return mark_safe(result)
