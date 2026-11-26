@@ -1,3 +1,3 @@
-include README.txt
-recursive-include lfs_canonical/locale *
-recursive-include lfs_canonical/templates *
+include README.txt LICENSE.txt
+graft lfs_canonical
+global-exclude __pycache__ *.py[co] .DS_Store
