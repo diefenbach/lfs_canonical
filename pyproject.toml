@@ -25,7 +25,7 @@ dependencies = [
 ]
 
 [project.urls]
-Source = "https://github.com/diefenbach/lfs_canonical"
+Source = "https://github.com/diefenbach/lfs-canonical"
 
 [tool.setuptools.packages.find]
 include = ["lfs_canonical*"]
